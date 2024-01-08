@@ -180,6 +180,20 @@ export type EdgeMarker = {
 export type EdgeMarkerType = string | EdgeMarker;
 
 export enum MarkerType {
-  Arrow = 'arrow',
-  ArrowClosed = 'arrowclosed',
+   /** 箭头（线型），用于服务关系、访问关系、影响关系 */
+   Arrow = 'arrow',
+   /** 箭头（填充），用于指派关系终点、触发关系、流量关系 */
+   ArrowClosed = 'arrowclosed',
+   /** 箭头（单边），用于关联关系 */
+   ArrowSingle = 'arrow-single',
+   /** 箭头（空心），用于实现关系、专业化关系 */
+   ArrowEmpty = 'arrow-empty',
+   /** 菱形（空心），用于聚合关系 */
+   Diagonal = 'diagonal',
+   /** 菱形（填充），用于组合关系 */
+   DiagonalFilled = 'diagonal-filled',
+   /** 圆点（空心），用于交界点（或） */
+   Circle = 'circle',
+   /** 圆点（填充），用于指派关系起点、交界点（与） */
+   CircleFilled = 'circle-filled',
 }
